@@ -18,3 +18,4 @@ DerivedData/
 # Packages/
 # Package.pins
 .build/
+.swiftpm/
