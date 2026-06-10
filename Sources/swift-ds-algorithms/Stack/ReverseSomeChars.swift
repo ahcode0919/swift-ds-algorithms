@@ -8,7 +8,7 @@
 public enum ReverseSomeChars {
     /// Reverse the characters in the string that are contained in the `chars` array
     public static func reverseSomeChars(str: String, chars: [Character]) -> String {
-        let char_set = Set(chars)
+        let char_set: Set<Character> = Set(chars)
         var reversed: [Character] = []
         let stack: Stack<Character> = Stack()
 
