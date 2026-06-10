@@ -1,0 +1,31 @@
+//
+//  Palindrome.swift
+//  swift-algorithms
+//
+//  Created by Aaron on 8/2/17.
+//
+
+import Foundation
+
+/// Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
+public class Palindrome {
+    /// String.reversed() - O(1)
+    public static func isPalindromeWithReverse(_ input: String) -> Bool {
+        if input.count < 2 {
+            return true
+        }
+        let lowercasedInput = input.lowercased()
+        return lowercasedInput == String(lowercasedInput.reversed())
+    }
+
+    public static func isPalindromeWithArray(_ input: String) -> Bool {
+        var charArray = Array(input.lowercased())
+
+        while charArray.count > 1, let last = charArray.popLast() {
+            if last != charArray.remove(at: 0) {
+                return false
+            }
+        }
+        return true
+    }
+}

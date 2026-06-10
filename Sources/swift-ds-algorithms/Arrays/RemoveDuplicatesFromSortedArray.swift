@@ -1,0 +1,19 @@
+//
+//  RemoveDuplicatesFromSortedArray.swift
+//  swift-algorithms
+//
+//  Created by Aaron on 3/14/21.
+//
+
+public class RemoveDuplicatesFromSortedArray {
+    public static func removeDuplicates(array: inout [Int]) {
+        var count = 0
+        while count < array.count - 1 {
+            if array[count] == array[count + 1] {
+                array.remove(at: count + 1)
+            } else {
+                count += 1
+            }
+        }
+    }
+}
