@@ -1,0 +1,25 @@
+name: Swift CI
+ 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+ 
+jobs:
+  build-and-test:
+    runs-on: macos-15
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+ 
+      - name: Build
+        run: SKIP_PLUGINS=1 swift build
+ 
+      - name: Run tests
+        run: SKIP_PLUGINS=1 swift test
+
+      - name: Run Linter
+        run: swift package plugin --allow-writing-to-package-directory swiftlint --strict
+ 
