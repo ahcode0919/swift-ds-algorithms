@@ -14,6 +14,10 @@ public class Stack<T> {
         return self.size() == 0
     }
 
+    public func peek() -> T? {
+        return self.stack.last
+    }
+
     public func pop() -> T? {
         return self.stack.popLast()
     }
