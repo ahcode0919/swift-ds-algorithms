@@ -11,9 +11,9 @@ import Testing
 @MainActor
 struct StackTests {
 
-    var stack: Stack<Int>
+    private var stack: Stack<Int>
 
-    init() async throws {
+    private init() async throws {
         stack = Stack<Int>()
     }
 
@@ -28,6 +28,13 @@ struct StackTests {
 
         stack.push(value: 1)
         #expect(stack.empty() == false)
+    }
+
+    @Test func testPeek() {
+        #expect(stack.peek() == nil)
+
+        stack.push(value: 1)
+        #expect(stack.peek() == 1)
     }
 
     @Test func testPop() {
