@@ -51,17 +51,23 @@ public class Helpers {
         return head
     }
 
-    public static func generateLinkedList(from array: [String]) throws -> SinglyLinkedListNode<String> {
-        let dummyHead = SinglyLinkedListNode(value: "")
-        var last = dummyHead
+    public static func generateLinkedList<T>(from array: [T]) throws -> SinglyLinkedListNode<T> {
+        var head: SinglyLinkedListNode<T>?
+        var last: SinglyLinkedListNode<T>?
 
         for value in array {
             let node = SinglyLinkedListNode(value: value)
-            last.next = node
-            last = node
+
+            if head == nil {
+                head = SinglyLinkedListNode(value: value)
+                last = head
+            } else {
+                last?.next = node
+                last = node
+            }
         }
 
-        guard let head = dummyHead.next else {
+        guard let head else {
             throw HelperError.invalidInput(message: "Failed to generate a linked list")
         }
 
