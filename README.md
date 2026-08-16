@@ -1,4 +1,4 @@
-# Swift Algorithms
+# Swift Algorithms ![](https://github.com/ahcode0919/swift-ds-algorithms/actions/workflows/ci.yml/badge.svg?branch=main)
 
 Repository of solutions to various problems and algorithms in Swift.
 
