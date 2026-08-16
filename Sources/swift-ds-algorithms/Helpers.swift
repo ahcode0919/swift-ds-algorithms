@@ -35,14 +35,28 @@ public class Helpers {
     }
 
     public static func generateLinkedList(ofLength length: Int) throws -> SinglyLinkedListNode<Int> {
-        guard length > 0 else {
-            throw HelperError.invalidInput(message: "Cannot generate a linked list with a length of 0 or less")
-        }
         let dummyHead = SinglyLinkedListNode(value: 0)
         var last = dummyHead
 
         for index in 0..<length {
             let node = SinglyLinkedListNode(value: index)
+            last.next = node
+            last = node
+        }
+
+        guard let head = dummyHead.next else {
+            throw HelperError.invalidInput(message: "Failed to generate a linked list")
+        }
+
+        return head
+    }
+
+    public static func generateLinkedList(from array: [String]) throws -> SinglyLinkedListNode<String> {
+        let dummyHead = SinglyLinkedListNode(value: "")
+        var last = dummyHead
+
+        for value in array {
+            let node = SinglyLinkedListNode(value: value)
             last.next = node
             last = node
         }
