@@ -23,9 +23,15 @@ let package = Package(
     targets: [
         .target(
             name: "swift-ds-algorithms",
+            exclude: [
+                "Arrays/README.md",
+                "DataStructures/README.md",
+                "Integers/README.md",
+                "Strings/README.md"
+            ],
             plugins: skipPlugins ? [] : [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
-            ],
+            ]
         ),
         .testTarget(
             name: "swift-ds-algorithms-tests",
