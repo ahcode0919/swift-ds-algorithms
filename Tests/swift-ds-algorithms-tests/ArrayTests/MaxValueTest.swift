@@ -15,7 +15,7 @@ struct MaxValueTest {
         #expect(MaxValue.max_value(nums: []) == nil)
         #expect(MaxValue.max_value(nums: [1]) == 1)
     }
-    
+
     @Test func testMaxValueBuiltin() throws {
         #expect(MaxValue.max_value_builtin(nums: [1, 2, 3, 4, 5]) == 5)
         #expect(MaxValue.max_value_builtin(nums: []) == nil)

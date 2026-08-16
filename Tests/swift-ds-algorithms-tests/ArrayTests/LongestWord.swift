@@ -16,7 +16,7 @@ struct LongestWordTests {
         #expect(LongestWord.longestWord(in: "a") == "a")
         #expect(LongestWord.longestWord(in: " a ") == "a")
     }
-    
+
     @Test func longestWordOnePass() throws {
         #expect(LongestWord.longestWordOnePass(in: "the quick brown fox jumped over the lazy dog") == "jumped")
         #expect(LongestWord.longestWordOnePass(in: "") == nil)

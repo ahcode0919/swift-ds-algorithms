@@ -5,28 +5,27 @@
 // Copyright © 2026. All rights reserved.
 //
 
-
 public enum LongestWord {
     public static func longestWord(in sentence: String) -> String? {
         guard sentence.count > 0 else {
             return nil
         }
-        
+
         let words = sentence.split(separator: " ")
-        var longestWord: Substring? = nil
-        
+        var longestWord: Substring?
+
         for word in words {
             if word.count > longestWord?.count ?? 0 {
                 longestWord = word
             }
         }
-        
+
         if let longestWord = longestWord {
             return String(longestWord)
         }
         return nil
     }
-    
+
     public static func longestWordOnePass(in sentence: String) -> String? {
         guard sentence.count > 0 else {
             return nil
@@ -37,11 +36,11 @@ public enum LongestWord {
         var end = 0
         var longest = 0
         var longestWord = (0, 0)
-        
+
         for (index, char) in arr.enumerated() {
             if char == " " {
                 end = index - 1
-                var length = end - start + 1
+                let length = end - start + 1
                 if length > longest {
                     longest = length
                     longestWord = (start, end)

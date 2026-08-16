@@ -14,7 +14,7 @@ public enum Pairs {
                 pairs.append([elements[i], elements[j]])
             }
         }
-        
+
         return pairs
     }
 }

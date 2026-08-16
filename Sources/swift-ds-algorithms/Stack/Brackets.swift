@@ -27,6 +27,6 @@ public enum Brackets {
             }
         }
 
-        return stack.empty()    
+        return stack.empty()
     }
 }

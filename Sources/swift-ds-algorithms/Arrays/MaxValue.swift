@@ -10,17 +10,17 @@ public enum MaxValue {
         guard !nums.isEmpty else {
             return nil
         }
-        
+
         return nums.max()
     }
-    
+
     public static func max_value(nums: [Int]) -> Int? {
         guard nums.count > 0 else {
             return nil
         }
-        
+
         var max = Int.min
-        
+
         for num in nums {
             if num > max {
               max = num
