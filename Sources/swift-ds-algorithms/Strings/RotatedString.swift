@@ -11,12 +11,14 @@ import Foundation
 /// from its end, then append them to the front.
 /// For example, “swift” rotated by two characters would be “ftswi”.
 public class RotatedString {
+    /// Approach 1 - Concatenate the original string to itself: "swiftswift" contains "ftswi" -> true
     public static func isRotatedStringWithAddition(_ original: String, rotated: String) -> Bool {
         guard original.count == rotated.count else { return false }
 
         return (original + original).contains(rotated)
     }
 
+    /// Approach 2 - Rotate through the string until a match is found.
     public static func isRotatedStringWithLoop(_ original: String, rotated: String) -> Bool {
         guard original.count == rotated.count else { return false }
 

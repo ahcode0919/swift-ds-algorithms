@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Traverse a binary tree breadth-first (level by level).
 public enum BreadthFirstSearch {
+    /// Returns the tree's values in breadth-first (level) order using a queue.
     public static func bfsValues(root: BinaryTreeNode<Int>?) -> [Int] {
         var values = [Int]()
 

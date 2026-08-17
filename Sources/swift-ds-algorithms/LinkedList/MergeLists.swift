@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Merge two sorted singly linked lists into a single sorted list.
 public enum MergeLists {
+    /// Merges `head1` and `head2`, both assumed to already be sorted in ascending order.
     public static func merge(
         head1: SinglyLinkedListNode<Int>?,
         head2: SinglyLinkedListNode<Int>?

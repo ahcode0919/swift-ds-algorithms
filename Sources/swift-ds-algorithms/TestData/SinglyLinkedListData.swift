@@ -5,8 +5,10 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Test fixtures for building singly linked lists.
 public enum SinglyLinkedListData {
 
+    /// Builds a linked list of the given length with sequential integer values starting at 0.
     public static func linkedList(ofLength length: Int) -> SinglyLinkedListNode<Int>? {
         guard length >= 0 else {
             return nil
@@ -24,6 +26,7 @@ public enum SinglyLinkedListData {
         return dummyHead.next
     }
 
+    /// Builds a linked list containing the given array's elements in order.
     public static func linkedList<T>(from array: [T]) -> SinglyLinkedListNode<T>? {
         var head: SinglyLinkedListNode<T>?
         var last: SinglyLinkedListNode<T>?
@@ -43,6 +46,7 @@ public enum SinglyLinkedListData {
         return head
     }
 
+    /// Returns the values of a linked list as an array, in order from head to tail.
     public static func linkedListToArray<T>(head: SinglyLinkedListNode<T>?) -> [T] {
         var result: [T] = []
         var current = head

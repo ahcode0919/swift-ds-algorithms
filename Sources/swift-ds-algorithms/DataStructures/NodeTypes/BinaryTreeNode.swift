@@ -5,6 +5,7 @@
 //  Created by Aaron on 4/14/26.
 //
 
+/// Node used by binary tree algorithms, holding a value and optional left/right children.
 public class BinaryTreeNode<T> {
     public var value: T
     public var left: BinaryTreeNode?

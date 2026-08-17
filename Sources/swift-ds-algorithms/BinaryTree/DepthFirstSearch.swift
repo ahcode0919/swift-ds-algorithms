@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Traverse a binary tree depth-first in pre-order (node, left, right).
 public enum DepthFirstSearch {
+    /// Returns the tree's values in pre-order using recursion.
     public static func dfsRecursive(root: BinaryTreeNode<Int>?) -> [Int] {
         guard let root else {
             return []
@@ -24,6 +26,7 @@ public enum DepthFirstSearch {
         return values
     }
 
+    /// Returns the tree's values in pre-order using an explicit stack.
     public static func dfs(root: BinaryTreeNode<Int>?) -> [Int] {
         var values = [Int]()
 

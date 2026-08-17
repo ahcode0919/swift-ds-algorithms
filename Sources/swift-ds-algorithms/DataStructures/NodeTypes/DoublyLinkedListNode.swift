@@ -5,6 +5,7 @@
 //  Created by Aaron on 4/20/26.
 //
 
+/// Node used by `DoublyLinkedList`, holding a value and references to the previous and next nodes.
 public class DoublyLinkedListNode<T> {
     public var value: T?
     public var previous: DoublyLinkedListNode?

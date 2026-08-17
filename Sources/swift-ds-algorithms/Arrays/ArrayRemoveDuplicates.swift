@@ -7,7 +7,9 @@
 
 import Foundation
 
-public class ArrayRemoveDuplicates {
+/// Find and remove duplicate elements from an Array.
+public enum ArrayRemoveDuplicates {
+    /// Uses an `NSOrderedSet` to maintain order and return unique elements.
     public static func removeDuplicatesWithNSOrderedSet<T>(_ array: [T]) -> [T] {
         let set = NSOrderedSet(array: array)
         guard let newArray = set.array as? [T] else {
@@ -16,6 +18,7 @@ public class ArrayRemoveDuplicates {
         return newArray
     }
 
+    /// Uses a `Set` to track duplicates as it builds a new array in-order.
     public static func removeDuplicatesWithSet<T: Hashable & Equatable>(_ array: [T]) -> [T] {
         var uniqueValues: [T] = []
         var seen = Set<T>()
@@ -30,6 +33,8 @@ public class ArrayRemoveDuplicates {
         return uniqueValues
     }
 
+    /// Uses `reduce(into:_)` to iterate through the array. This approach is less efficient
+    /// due to the time complexity of the inner `contains`.
     public static func removeDuplicatesWithReduce<T: Equatable>(_ array: [T]) -> [T] {
         return array.reduce(into: []) { (results, value) in
             let elementPresent = results.contains { (element) -> Bool in

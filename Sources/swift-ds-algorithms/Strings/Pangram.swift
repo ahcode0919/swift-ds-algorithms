@@ -11,11 +11,13 @@ import Foundation
 public class Pangram {
     private static let alphabet = "abcdefghijklmnopqrstuvwxyz"
 
+    /// Approach 1 - Set
     public static func isPangramWithSet(_ string1: String) -> Bool {
         let string1Set = Set(string1.lowercased())
         return string1Set.count == string1.count
     }
 
+    /// Approach 2 - Loop/Contains
     public static func isPangramWithLoop(_ string1: String) -> Bool {
         let lowercased = string1.lowercased()
 

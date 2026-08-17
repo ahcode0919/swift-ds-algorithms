@@ -10,6 +10,7 @@ import Foundation
 /// Check if one string contains another
 public class Contains {
 
+    /// Approach 1: Use the `range(of:_)` String API function to check for presence of a substring.
     public static func containsIgnoreCaseWithRange(_ string1: String, contains string2: String) -> Bool {
         if string1.count < string2.count || string1.isEmpty && string2.isEmpty {
             return false
@@ -17,6 +18,7 @@ public class Contains {
         return string1.range(of: string2) != nil
     }
 
+    /// Approach 2: Use a for loop to iterate across strings.
     public static func containsIgnoreCaseWithLoop(_ string1: String, contains string2: String) -> Bool {
         if string1.count < string2.count || string1.isEmpty && string2.isEmpty {
             return false
@@ -44,6 +46,7 @@ public class Contains {
         return false
     }
 
+    /// Approach 3: Use the native String API `contains(:_)`.
     public static func containsWithStringAPI(_ string1: String, contains string2: String) -> Bool {
         return string1.contains(string2)
     }

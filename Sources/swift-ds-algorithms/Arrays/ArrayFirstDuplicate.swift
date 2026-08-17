@@ -7,8 +7,9 @@
 
 import Foundation
 
-public class ArrayFirstDuplicate {
+public enum ArrayFirstDuplicate {
 
+    /// Given an array that contains only numbers, find the first duplicate number.
     public static func firstDuplicate(_ array: [Int]) -> Int? {
         var uniqueNums = Set<Int>()
 

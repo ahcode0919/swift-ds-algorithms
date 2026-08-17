@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Find the longest word in a sentence.
 public enum LongestWord {
+    /// Returns the longest word in the sentence by splitting on spaces and comparing lengths.
     public static func longestWord(in sentence: String) -> String? {
         guard sentence.count > 0 else {
             return nil
@@ -26,6 +28,8 @@ public enum LongestWord {
         return nil
     }
 
+    /// Returns the longest word in the sentence in a single pass by tracking the start and
+    /// end indices of the current word as it scans for spaces.
     public static func longestWordOnePass(in sentence: String) -> String? {
         guard sentence.count > 0 else {
             return nil

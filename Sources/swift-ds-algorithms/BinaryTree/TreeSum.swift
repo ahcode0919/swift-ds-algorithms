@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Sum all the values in a binary tree.
 public enum TreeSum {
+    /// Sums the tree's values iteratively using an explicit stack.
     public static func treeSumIterative(root: BinaryTreeNode<Int>?) -> Int {
         var total = 0
 
@@ -30,6 +32,7 @@ public enum TreeSum {
         return total
     }
 
+    /// Sums the tree's values recursively.
     public static func treeSumRecursive(root: BinaryTreeNode<Int>?) -> Int {
         guard let root else {
             return 0

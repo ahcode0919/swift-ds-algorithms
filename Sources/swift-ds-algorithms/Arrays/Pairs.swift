@@ -5,7 +5,10 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Generate pairs of elements from an array.
 public enum Pairs {
+    /// Returns every unique pair of elements from the array, without repeating a pair in
+    /// reverse order.
     public static func pairs(for elements: [String]) -> [[String]] {
         var pairs = [[String]]()
 

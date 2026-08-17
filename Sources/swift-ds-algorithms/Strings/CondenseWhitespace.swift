@@ -7,8 +7,11 @@
 
 import Foundation
 
-/// Remove extra white space from String
+/// Remove the whitespace from a String.
+///
+/// Example: "Hello World" -> "HelloWorld"
 public class CondenseWhitespace {
+    /// Approach 1: Remove whitespace using a for loop and a character array.
     public static func condenseWhitespaceWithLoop(_ text: String) -> String {
         var charArray = [Character]()
         var lastCharWasSpace = false
@@ -30,10 +33,13 @@ public class CondenseWhitespace {
         return String(charArray)
     }
 
+    /// Approach 2: Utilize a regular expression to remove whitespace.
     public static func condenseWhitespaceWithRegex(_ text: String) -> String {
         return text.replacingOccurrences(of: " +", with: " ", options: .regularExpression)
     }
 
+    /// Approach 3: Utilize the `split(separator:_)` String function to remove whitespace
+    /// and then `joined(separator:_)` to concatenate the result.
     public static func condenseWhitespaceWithSplit(_ text: String) -> String {
         var result = text.split(separator: " ").joined(separator: " ")
         if text.first == " " {

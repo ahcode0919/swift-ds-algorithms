@@ -5,8 +5,11 @@
 //  Created by Aaron on 4/14/26.
 //
 
+/// Validate whether a binary tree is a valid binary search tree.
 public enum ValidateBinaryTree {
 
+    /// Returns true if every node's value falls strictly between the lower and upper
+    /// bounds established by its ancestors, verified iteratively with an explicit stack.
     public static func isValidBST(_ root: BinaryTreeNode<Int>?) -> Bool {
         guard let root else {
             return false

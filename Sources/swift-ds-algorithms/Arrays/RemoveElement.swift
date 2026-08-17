@@ -5,7 +5,9 @@
 //  Created by Aaron on 3/19/26.
 //
 
-public class RemoveElement {
+/// You are given an integer array and an integer. Remove all occurrences of the integer
+/// from the array in-place.
+public enum RemoveElement {
     /// Remove the element from the array in-place and return the new length of the array
     public static func removeElement(from arr: inout [Int], value: Int) -> Int {
         var p1 = 0

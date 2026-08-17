@@ -5,6 +5,8 @@
 //  Created by Aaron on 4/21/26.
 //
 
+/// Queue backed by a fixed-size array that wraps around on itself, doubling its capacity
+/// and reindexing when full.
 public class CircularQueue<T> {
     private var storage: [T?]
 
@@ -18,6 +20,7 @@ public class CircularQueue<T> {
         self.storage = [T?](repeating: nil, count: capacity)
     }
 
+    /// Add a value to the queue, doubling and resizing the underlying storage if it's at capacity.
     public func enqueue(_ value: T) {
         if count == capacity {
             self.capacity *= 2
@@ -34,10 +37,12 @@ public class CircularQueue<T> {
         }
     }
 
+    /// Returns true if the queue contains no elements.
     public func empty() -> Bool {
         return count == 0
     }
 
+    /// Remove and return the value at the front of the queue.
     public func deque() -> T? {
         guard count > 0 else {
             return nil
@@ -51,6 +56,7 @@ public class CircularQueue<T> {
         return value
     }
 
+    /// Grow the underlying storage to the given capacity.
     public func resize(capacity: Int) {
         if capacity < self.capacity {
             return

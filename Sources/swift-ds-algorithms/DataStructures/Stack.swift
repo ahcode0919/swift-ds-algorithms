@@ -5,6 +5,7 @@
 //  Created by Aaron on 3/14/21.
 //
 
+/// Basic stack implementation. Stack is a LIFO data structure.
 public class Stack<T> {
     private var stack: [T] = []
 
