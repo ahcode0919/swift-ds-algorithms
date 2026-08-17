@@ -5,6 +5,7 @@
 //  Created by Aaron on 4/22/26.
 //
 
+/// Node used to build a trie, holding a value and its child nodes.
 public class TrieNode<T> {
     public var value: T
     public var children: [TrieNode<T>]

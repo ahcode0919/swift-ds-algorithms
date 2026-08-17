@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Test fixtures for building binary trees.
 public enum BinaryTreeData {
+    /// Builds a complete binary tree of the given depth with sequentially numbered values.
     public static func balanced(depth: Int) -> BinaryTreeNode<Int>? {
         guard depth >= 0 else { return nil }
 
@@ -36,6 +38,7 @@ public enum BinaryTreeData {
         return root
     }
 
+    /// Returns the tree's values in in-order (left, node, right) traversal order.
     public static func inOrderValues<T>(root: BinaryTreeNode<T>?) -> [T] {
         return inOrder(node: root)
     }
@@ -53,6 +56,7 @@ public enum BinaryTreeData {
         return values
     }
 
+    /// Returns the tree's values in level-order (breadth-first) traversal order.
     public static func levelOrderValues<T>(root: BinaryTreeNode<T>?) -> [T] {
         var result = [T]()
 
@@ -76,6 +80,7 @@ public enum BinaryTreeData {
         return result
     }
 
+    /// Builds a small, unbalanced binary tree fixture for testing.
     public static func unbalanced() -> BinaryTreeNode<Int> {
         let c = BinaryTreeNode(value: 3)
         let d = BinaryTreeNode(value: 4)

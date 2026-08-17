@@ -5,6 +5,7 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Generates a sequence of incrementing integers, useful for assigning unique test values.
 public class IntegerCounter {
     private var current: Int
 
@@ -12,6 +13,7 @@ public class IntegerCounter {
         self.current = start
     }
 
+    /// Returns the current value and increments the counter.
     public func next() -> Int {
         defer { current += 1 }
         return current

@@ -5,7 +5,9 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Check if two strings are anagrams of each other.
 public enum Anagrams {
+    /// Returns true if `a` and `b` contain the same characters with the same frequency.
     public static func isAnagram(_ a: String, _ b: String) -> Bool {
         var dictA = [Character: Int]()
         var dictB = [Character: Int]()

@@ -5,7 +5,10 @@
 //  Created by Aaron on 6/10/26.
 //
 
+/// Check that a string's brackets are balanced and properly nested.
 public enum Brackets {
+    /// Returns true if every `(`, `[`, and `{` in the input is closed by the matching
+    /// bracket in the correct order.
     public static func validBrackets(_ input: String) -> Bool {
         let stack = Stack<Character>()
         let brackets: [Character: Character] = [

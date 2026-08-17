@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Given a string, find and return the first instance of a non-repeating character in it.
+/// If there is no such character, return '_'.
 public class FirstNotRepeatingCharacter {
 
     public static func firstWithDictionary(_ string: String) -> Character? {

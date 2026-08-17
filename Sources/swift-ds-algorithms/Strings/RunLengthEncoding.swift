@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Perform basic run length encoding on an input string.
+///
+/// Example: `"aaabbcddd"` -> `a3b2cd3`
 public class RunLengthEncoding {
     public static func runLengthEncoding(_ input: String) -> String {
         if input.isEmpty {

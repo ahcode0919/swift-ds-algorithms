@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Reverse the words in a sentence.
+///
+/// Example: "foo bar baz" -> "oof rab zab"
 public class ReverseWordsInSentence {
     public static func reverse(_ sentence: String) -> String {
         let words = sentence.split(separator: " ")

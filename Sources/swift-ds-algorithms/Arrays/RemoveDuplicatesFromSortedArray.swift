@@ -5,7 +5,8 @@
 //  Created by Aaron on 3/14/21.
 //
 
-public class RemoveDuplicatesFromSortedArray {
+public enum RemoveDuplicatesFromSortedArray {
+    /// Remove duplicate values in-place from a sorted array.
     public static func removeDuplicates(array: inout [Int]) {
         var count = 0
         while count < array.count - 1 {

@@ -5,7 +5,10 @@
 // Copyright © 2026. All rights reserved.
 //
 
+/// Interleave (zipper) two singly linked lists node by node.
 public enum ZipperLists {
+    /// Merges `head1` and `head2` by alternating nodes from each list. Any remaining nodes
+    /// from the longer list are appended at the end.
     public static func zipper(
         head1: SinglyLinkedListNode<String>?,
         head2: SinglyLinkedListNode<String>?

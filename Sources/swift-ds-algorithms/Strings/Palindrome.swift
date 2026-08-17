@@ -9,7 +9,7 @@ import Foundation
 
 /// Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
 public class Palindrome {
-    /// String.reversed() - O(1)
+    /// Approach 1 - `String.reversed()` - O(1)
     public static func isPalindromeWithReverse(_ input: String) -> Bool {
         if input.count < 2 {
             return true
@@ -18,6 +18,7 @@ public class Palindrome {
         return lowercasedInput == String(lowercasedInput.reversed())
     }
 
+    /// Approach 2 - Array
     public static func isPalindromeWithArray(_ input: String) -> Bool {
         var charArray = Array(input.lowercased())
 

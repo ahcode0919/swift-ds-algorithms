@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Singly linked list data structure.
 public class SinglyLinkedList<T> {
     public var head: SinglyLinkedListNode<T>?
     public var length: Int {
