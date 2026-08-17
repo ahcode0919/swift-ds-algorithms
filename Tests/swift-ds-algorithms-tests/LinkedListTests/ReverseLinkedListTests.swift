@@ -19,11 +19,11 @@ struct ReverseLinkedListTest {
         #expect(result?.value == 0)
         #expect(result?.next == nil)
 
-        head = try Helpers.generateLinkedList(ofLength: 10)
+        head = SinglyLinkedListData.linkedList(ofLength: 10)
         result = ReverseLinkedList.reverse(head: head)
         #expect(result != nil)
 
-        let values = Helpers.linkedListToArray(head: result)
+        let values = SinglyLinkedListData.linkedListToArray(head: result)
         #expect(values == [9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
     }
 
@@ -36,11 +36,11 @@ struct ReverseLinkedListTest {
         #expect(result?.value == 0)
         #expect(result?.next == nil)
 
-        head = try Helpers.generateLinkedList(ofLength: 10)
+        head = SinglyLinkedListData.linkedList(ofLength: 10)
         result = ReverseLinkedList.reverseRecursive(head: head)
         #expect(result != nil)
 
-        let values = Helpers.linkedListToArray(head: result)
+        let values = SinglyLinkedListData.linkedListToArray(head: result)
         #expect(values == [9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
     }
 }
