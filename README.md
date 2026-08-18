@@ -4,5 +4,8 @@ Repository of solutions to various problems and algorithms in Swift.
 
 ## Commands
 
-- Run unit tests: `swift test`
-- Run formatting/linting: `swift package plugin swiftlint --fix`
+Project supports `Makefile` commands
+
+- Build project: `make build`
+- Run unit tests: `make test`
+- Run formatting/linting: `make lint`
