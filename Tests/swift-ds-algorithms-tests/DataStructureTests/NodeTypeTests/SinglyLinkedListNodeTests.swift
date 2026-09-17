@@ -10,6 +10,7 @@ import Testing
 
 struct SinglyLinkedListNodeTests {
 
+    @Test
     func testSinglyLinkedListNode() {
         let node = SinglyLinkedListNode(value: 0)
         #expect(node.next == nil)
