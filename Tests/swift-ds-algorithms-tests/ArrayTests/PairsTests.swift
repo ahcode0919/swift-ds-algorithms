@@ -8,7 +8,7 @@
 import swift_ds_algorithms
 import Testing
 
-struct Test {
+struct PairTests {
 
     @Test func testPairs() throws {
         var pairs = Pairs.pairs(for: ["a", "b", "c"])

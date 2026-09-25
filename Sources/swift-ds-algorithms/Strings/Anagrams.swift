@@ -28,4 +28,24 @@ public enum Anagrams {
 
         return true
     }
+
+    public static func isAnagramSingleCollection(_ a: String, _ b: String) -> Bool {
+        var dict = [Character: Int]()
+
+        for char in a {
+            dict[char, default: 0] += 1
+        }
+
+        for char in b {
+            dict[char, default: 0] -= 1
+        }
+
+        for (key, value) in dict {
+            if dict[key] != 0 {
+                return false
+            }
+        }
+
+        return true
+    }
 }

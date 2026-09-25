@@ -8,7 +8,7 @@
 import swift_ds_algorithms
 import Testing
 
-struct MaxValueTest {
+struct MaxValueTests {
 
     @Test func testMaxValue()  throws {
         #expect(MaxValue.max_value(nums: [1, 2, 3, 4, 5]) == 5)
